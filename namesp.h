@@ -1,0 +1,34 @@
+//
+// Created by »ªË¶ on 13/7/2022.
+//
+
+#ifndef CHARPTER9_NAMESP_H
+#define CHARPTER9_NAMESP_H
+
+#include <string>
+
+namespace pers
+{
+    struct Person
+    {
+        std::string fname;
+        std::string lname;
+    };
+    void getPerson(Person &);
+    void showPerson(const Person &);
+}
+
+namespace debts
+{
+    using namespace pers;
+    struct Debt
+    {
+        Person name;
+        double amount;
+    };
+    void getDebt(Debt &);
+    void showDebt(const Debt &);
+    double sumDebts(const Debt ar[],int n);
+}
+
+#endif //CHARPTER9_NAMESP_H
